@@ -1,0 +1,270 @@
+body {
+  font-family: 'Vazir', sans-serif;
+  font-weight: bold;
+}
+
+
+
+
+/*بخش نوبار بالایی ارز ها */
+.ticker-container {
+    overflow: hidden;
+    white-space: nowrap;
+    direction: ltr;
+    position: relative;
+}
+
+.ticker-wrapper {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    animation: ticker 60s linear infinite;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.crypto-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.crypto-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    border-radius: 50%;
+}
+
+.price-up {
+    color: #10b981;
+}
+
+.price-down {
+    color: #ef4444;
+}
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-wrapper {
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: ticker 40s linear infinite;
+}
+
+    /*اتمام بخش نوبار*/
+
+
+
+
+
+    /*شروع بخش معرفی */
+       :root {
+            --gold: #d4af37;
+            --gold-light: #f5d77f;
+            --gold-dark: #9e7c1e;
+            --dark: #121212;
+            --dark-light: #1e1e1e;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: var(--dark);
+            color: var(--gold-light);
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            position: relative;
+            padding: 6rem 0;
+            background-color: var(--dark);
+            overflow: hidden;
+        }
+        
+        /* Background Decorations */
+        .bg-decoration {
+            position: absolute;
+            color: rgba(212, 175, 55, 0.05);
+            font-size: 8rem;
+            font-weight: bold;
+            z-index: 0;
+            user-select: none;
+            pointer-events: none;
+        }
+        
+        .plus-1 {
+            top: 10%;
+            right: 5%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .plus-2 {
+            bottom: 15%;
+            right: 15%;
+            font-size: 6rem;
+            animation: float 10s ease-in-out infinite;
+        }
+        
+        .star-1 {
+            top: 20%;
+            left: 10%;
+            animation: float 9s ease-in-out infinite;
+        }
+        
+        .star-2 {
+            bottom: 10%;
+            left: 20%;
+            font-size: 5rem;
+            animation: float 7s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(10px, -10px) rotate(5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        
+        /* Content Styles */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.3), transparent);
+            z-index: 1;
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .image-container:hover .profile-image {
+            transform: scale(1.05);
+        }
+        
+        .content-text h1 {
+            font-weight: 700;
+            margin: 0 1rem 1rem 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .content-text h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+        }
+        
+        .content-text p {
+            margin: 0 1rem 1rem 0;
+            line-height: 1.8;
+            color: rgba(245, 215, 127, 0.8);
+        }
+        
+        .btn-gold {
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+            border: none;
+            color: var(--dark);
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+        
+        .btn-gold:hover {
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+            color: var(--dark);
+        }
+        
+        .btn-outline-gold {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .highlight-box {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 5px;
+            padding: 0 5px;
+            margin: 0 2px;
+            color: var(--gold);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 4rem 0;
+            }
+            
+            .image-container {
+                margin-bottom: 3rem;
+                max-height: 400px;
+            }
+            
+            .btn-gold, .btn-outline-gold {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
+                margin-left: 0;
+            }
+        }
+        /*پایان بخش معرفی */
