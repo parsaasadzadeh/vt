@@ -157,7 +157,7 @@ body {
         
         .content-text h1 {
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin: 1.5rem;
             position: relative;
             display: inline-block;
         }
@@ -176,6 +176,7 @@ body {
             position: absolute;
             bottom: -10px;
             right: 0;
+          margin: 1.5rem;
             width: 80px;
             height: 3px;
             background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
@@ -184,6 +185,7 @@ body {
         .content-text p {
             margin-bottom: 2rem;
             line-height: 1.8;
+          margin: 1.5rem;
           padding : 2rem;
             color: rgba(245, 215, 127, 0.8);
         }
